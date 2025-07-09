@@ -1,5 +1,4 @@
-
-        /* General Body and Container Styles */
+/* General Body and Container Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -168,7 +167,7 @@
             justify-content: center;
             align-items: center;
             padding: 80px 20px;
-            background: linear-gradient to bottom right, #eaf6ff, #f8fcfd; /* Soft gradient */
+            background: linear-gradient(to bottom right, #eaf6ff, #f8fcfd); /* Soft gradient */
             text-align: center;
             gap: 60px; /* More space between content and image */
             max-width: 1400px; /* Wider section */
@@ -814,41 +813,760 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* --- Footer Styles (Optional, but good for completeness) --- */
-        .footer {
-            background-color: #333;
-            color: white;
+
+        /* Case Study Section Styles */
+        .client-stories-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .client-stories-section h3 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 20px;
             text-align: center;
-            padding: 30px 20px;
+        }
+
+        .client-stories-section h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .case-study-item {
+            background-color: #fefefe;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .case-study-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .case-study-item h4 {
+            font-size: 1.5em;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .case-study-item p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .case-study-item .btn {
+            padding: 8px 18px;
             font-size: 0.9em;
-            margin-top: 60px; /* Space above footer */
+            border-radius: 20px;
         }
 
-        .footer .container {
+        /* Service Detail Section Styles */
+        .service-detail-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .service-detail-section h2 {
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service-detail-section h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .service-detail-section p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .service-detail-section ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .service-detail-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        .service-detail-section .btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-align: center;
+            width: auto;
+        }
+
+
+        /* --- Blog & FAQ Tab Content Styles (blog-faq-tab-content) --- */
+
+        /* Basic Section Padding and Background */
+        #blog-faq-tab-content {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Blog Header Section */
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .blog-header h1 {
+            font-size: 2.8em; /* Slightly larger for main blog title */
+            color: #0056b3; /* Doali's primary blue */
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .blog-header p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* Blog Container - Flexbox for main content and sidebar */
+        .blog-container {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 30px; /* Space between main content and sidebar */
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
         }
 
-        .footer p {
+        /* Blog Main Content Area */
+        .blog-main-content {
+            flex: 3; /* Takes 3 parts of the available space */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+
+        /* Individual Blog Post Styles */
+        .blog-post {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-post h2 {
+            font-size: 2em;
+            color: #007bff; /* Doali's secondary blue */
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .blog-post .meta {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            display: block; /* Ensures image takes full width */
+        }
+
+        .blog-post p {
+            font-size: 1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .blog-post p strong {
+            color: #0056b3; /* Highlight important text */
+        }
+
+        .blog-post ul,
+        .blog-post ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+            list-style-type: disc; /* Default for ul */
+            color: #444;
+        }
+
+        .blog-post ol {
+            list-style-type: decimal;
+        }
+
+        .blog-post li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .blog-post .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post .read-more:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .blog-post .read-more i {
+            margin-left: 5px;
+        }
+
+        /* --- FAQ Section Styles --- */
+        .faq-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            padding-right: 10px; /* Space for the icon */
+        }
+
+        .faq-question .icon {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+            color: #007bff;
+        }
+
+        .faq-question.active .icon {
+            transform: rotate(45deg); /* Changes plus to an X or makes it look like a minus */
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out; /* Smooth collapse/expand */
+            opacity: 0;
+            padding-top: 0;
+        }
+
+        .faq-answer p {
+            padding-top: 15px;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* When the answer is active (JS adds a class, e.g., 'active-answer') */
+        .faq-answer.active {
+            max-height: 500px; /* Adjust based on expected content length */
+            opacity: 1;
+        }
+
+
+        /* --- Blog Sidebar Styles --- */
+        .blog-sidebar {
+            flex: 1; /* Takes 1 part of the available space */
+            min-width: 250px; /* Minimum width before wrapping */
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            align-self: flex-start; /* Sticks to the top */
+            position: sticky; /* Sticky sidebar */
+            top: 20px; /* Adjust as needed for header clearance */
+        }
+
+        .blog-sidebar h3 {
+            font-size: 1.5em;
+            color: #0056b3;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .blog-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .blog-sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .blog-sidebar ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .blog-sidebar ul li a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .recent-posts .recent-post-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .recent-posts .recent-post-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 15px;
+            flex-shrink: 0; /* Prevents image from shrinking */
+        }
+
+        .recent-posts .recent-post-item h4 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .recent-posts .recent-post-item h4 a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .recent-posts .recent-post-item h4 a:hover {
+            color: #007bff;
+        }
+
+        .recent-posts .recent-post-item p {
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        /* --- Blog Single Post Section Styles (for home-cleaning-post-content, etc.) --- */
+        .blog-single-post-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            margin: 40px auto; /* Center and give space */
+            max-width: 900px; /* Max width for single post content */
+            line-height: 1.7;
+        }
+
+        .blog-single-post-section h2 {
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .blog-single-post-section .meta {
+            text-align: center;
+            font-size: 0.95em;
+            color: #777;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .blog-single-post-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blog-single-post-section h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .blog-single-post-section p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .blog-single-post-section p strong {
+            color: #0056b3;
+        }
+
+        .blog-single-post-section ul,
+        .blog-single-post-section ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            list-style-type: disc;
+            color: #444;
+        }
+
+        .blog-single-post-section ol {
+            list-style-type: decimal;
+        }
+
+        .blog-single-post-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .blog-single-post-section .btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-align: center;
+            width: auto;
+        }
+
+        /* --- Footer Styles --- */
+        .footer {
+            background-color: #222; /* Darker footer background */
+            color: #f0f0f0;
+            padding: 60px 20px 20px; /* More padding top */
+            font-size: 0.95em;
+            margin-top: 60px;
+            border-top: 5px solid #007bff; /* Accent border */
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px; /* Increased gap between columns */
+            max-width: 1200px;
+            margin: 0 auto 40px; /* Space below content before bottom bar */
+            text-align: left;
+        }
+
+        .footer-content h3 {
+            color: #007bff; /* Bright blue for headings */
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-content h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #28a745; /* Green accent */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-about p,
+        .footer-contact p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .footer-contact p i {
+            margin-right: 10px;
+            color: #007bff; /* Icon color */
+            width: 20px; /* Fixed width for icon alignment */
+            text-align: center;
+        }
+
+        .footer-contact a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
 
-        .footer .social-icons-footer {
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .footer-links ul li a:hover {
+            color: #fff;
+            padding-left: 5px; /* Subtle hover effect */
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .newsletter-form {
             display: flex;
-            justify-content: center;
+            gap: 10px;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.95em;
+        }
+
+        .newsletter-form input[type="email"]::placeholder {
+            color: #aaa;
+        }
+
+        .newsletter-form .btn-primary-small {
+            background-color: #28a745; /* Green subscribe button */
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .newsletter-form .btn-primary-small:hover {
+            background-color: #218838;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 25px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between copyright and social icons */
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: #aaa;
+        }
+
+        .social-icons-footer {
+            display: flex;
             gap: 15px;
-            margin-top: 15px;
         }
 
-        .footer .social-icons-footer img {
-            width: 28px;
-            height: 28px;
-            transition: transform 0.2s ease;
+        .social-icons-footer a {
+            color: #007bff; /* Default color for social icons in footer */
+            font-size: 1.5em;
+            transition: color 0.3s ease, transform 0.2s ease;
         }
 
-        .footer .social-icons-footer img:hover {
-            transform: scale(1.15);
+        /* Specific colors for footer social icons */
+        .social-icons-footer .fab.fa-facebook-f { color: #3b5998; }
+        .social-icons-footer .fab.fa-instagram { color: #E1306C; }
+        .social-icons-footer .fab.fa-whatsapp { color: #25d366; }
+
+        .social-icons-footer a:hover {
+            transform: scale(1.1);
+            color: #fff; /* White on hover for contrast */
+        }
+
+        /* Live Chat Button */
+        .live-chat-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #28a745; /* Green */
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .live-chat-btn:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+
+        .live-chat-btn i {
+            font-size: 1.2em;
+        }
+
+        .case-study-detail-section {
+            padding: 20px; /* Inner padding within the section */
+        }
+
+        /* Main Heading for Case Study */
+        .case-study-detail-section h2 {
+            color: #0056b3; /* A strong, professional blue for main titles */
+            text-align: center;
+            margin-bottom: 30px; /* Space below the main heading */
+            font-size: 2.5em; /* Larger, more impactful heading */
+            font-weight: 700; /* Bold */
+            line-height: 1.3;
+            border-bottom: 2px solid #e0e0e0; /* Subtle underline */
+            padding-bottom: 15px; /* Space between text and underline */
+        }
+
+        /* Paragraph Text */
+        .case-study-detail-section p {
+            margin-bottom: 15px; /* Space between paragraphs */
+            font-size: 1.05em;
+            color: #444; /* Slightly lighter gray for body text */
+        }
+
+        /* Client Name Highlight */
+        .case-study-detail-section p strong {
+            color: #0056b3; /* Highlight client name with the primary color */
+            font-weight: 600; /* Slightly bolder */
+        }
+
+        /* Sub-headings (Our Solution, Results) */
+        .case-study-detail-section h3 {
+            color: #007bff; /* A slightly lighter blue for sub-headings */
+            margin-top: 35px; /* More space above sub-headings */
+            margin-bottom: 15px;
+            font-size: 1.8em; /* Size for sub-headings */
+            font-weight: 600;
+            border-bottom: 1px solid #e0e0e0; /* Subtle underline for sub-headings */
+            padding-bottom: 8px; /* Space below underline */
+        }
+
+        /* Results List Styling */
+        .case-study-detail-section ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0; /* Remove default ul padding */
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .case-study-detail-section ul li {
+            background-color: #e6f7ff; /* Light blue background for list items */
+            padding: 15px 20px;
+            margin-bottom: 10px; /* Space between list items */
+            border-left: 5px solid #007bff; /* Accent border on the left */
+            border-radius: 5px; /* Rounded corners for list items */
+            font-size: 1.1em;
+            color: #333;
+            display: flex; /* Allows checkmark to align nicely */
+            align-items: flex-start; /* Align text to top if multiple lines */
+        }
+
+        /* Add a checkmark icon to list items (requires no HTML change if used with ::before) */
+        .case-study-detail-section ul li::before {
+            content: '\2713'; /* Unicode checkmark character */
+            color: #28a745; /* Green checkmark */
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+            line-height: 1; /* Aligns vertically with text */
+            flex-shrink: 0; /* Prevent icon from shrinking on small screens */
+        }
+
+
+        /* --- Call to Action / Back Button Styling --- */
+        .case-study-detail-section .btn-primary {
+            display: block; /* Make it a block element to control width/margin */
+            width: fit-content; /* Adjust width to content */
+            margin: 40px auto 20px auto; /* Center button horizontally with margins */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 500;
+            text-decoration: none; /* Remove underline from link */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+        }
+
+        .case-study-detail-section .btn-primary:hover {
+
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* --- Responsive Design (Media Queries) --- */
@@ -871,7 +1589,7 @@
                 width: 100%;
             }
 
-            .why-choose-list, .service-grid, .testimonial-grid {
+            .why-choose-list, .service-grid, .testimonial-grid, .case-study-grid { /* Added .case-study-grid */
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 25px;
             }
@@ -910,6 +1628,52 @@
 
             .gallery-item img {
                 height: 200px;
+            }
+
+            /* Service Detail Section responsiveness */
+            .service-detail-section {
+                padding: 30px;
+                margin: 30px auto;
+                max-width: 90%;
+            }
+
+            /* Blog Container for tablets */
+            .blog-container {
+                flex-direction: column; /* Stack main content and sidebar */
+            }
+
+            .blog-main-content, .blog-sidebar {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+                min-width: unset; /* Remove min-width constraint */
+            }
+
+            .blog-sidebar {
+                position: static; /* Remove sticky position on tablets */
+                top: auto;
+                margin-top: 30px; /* Add space when stacked */
+            }
+
+            .blog-single-post-section {
+                padding: 30px;
+                margin: 30px auto;
+                max-width: 90%;
+            }
+
+            /* Footer responsiveness for tablets */
+            .footer-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns for tablets */
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .social-icons-footer {
+                justify-content: center;
             }
         }
 
@@ -1021,7 +1785,7 @@
                 margin-bottom: 30px;
             }
 
-            .why-choose-list, .service-grid, .testimonial-grid, .motto-section, .gallery-grid {
+            .why-choose-list, .service-grid, .testimonial-grid, .motto-section, .gallery-grid, .case-study-grid { /* Added .case-study-grid */
                 grid-template-columns: 1fr; /* Single column layout */
                 gap: 20px;
             }
@@ -1062,6 +1826,112 @@
 
             .testimonial-form button[type="submit"] {
                 width: 100%; /* Full width button */
+            }
+
+            /* Service Detail Section on phones */
+            .service-detail-section {
+                padding: 25px;
+                margin: 25px auto;
+                max-width: 95%;
+            }
+
+            .service-detail-section h2 {
+                font-size: 2em;
+            }
+
+            .service-detail-section h3 {
+                font-size: 1.6em;
+            }
+
+            .service-detail-section p, .service-detail-section li {
+                font-size: 0.95em;
+            }
+
+            /* Blog specific for phones */
+            #blog-faq-tab-content {
+                padding: 25px 15px;
+            }
+
+            .blog-header h1 {
+                font-size: 2.2em;
+            }
+
+            .blog-header p {
+                font-size: 1em;
+            }
+
+            .blog-post {
+                padding: 20px;
+            }
+
+            .blog-post h2 {
+                font-size: 1.8em;
+            }
+
+            .faq-section {
+                padding: 20px;
+            }
+
+            .faq-section h2 {
+                font-size: 2em;
+            }
+
+            .faq-question {
+                font-size: 1em;
+            }
+
+            .blog-single-post-section {
+                padding: 25px;
+                margin: 25px auto;
+                max-width: 95%;
+            }
+
+            .blog-single-post-section h2 {
+                font-size: 2em;
+            }
+
+            .blog-single-post-section h3 {
+                font-size: 1.6em;
+            }
+
+            .blog-single-post-section p, .blog-single-post-section li {
+                font-size: 0.95em;
+            }
+
+            /* Footer on phones */
+            .footer-content {
+                grid-template-columns: 1fr; /* Single column */
+                gap: 25px;
+                text-align: center; /* Center content in footer columns */
+            }
+
+            .footer-content h3::after {
+                left: 50%; /* Center the underline */
+                transform: translateX(-50%);
+            }
+
+            .newsletter-form {
+                flex-direction: column; /* Stack input and button */
+                gap: 15px;
+            }
+
+            .newsletter-form input[type="email"],
+            .newsletter-form .btn-primary-small {
+                width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .social-icons-footer {
+                justify-content: center;
+            }
+            .live-chat-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 1em;
             }
         }
 
@@ -1128,943 +1998,43 @@
             .add-testimonial-section h3 {
                 font-size: 1.8em;
             }
+
+            /* Case Study Detail on smallest phones */
+            .case-study-detail-section h2 {
+                font-size: 1.8em;
+            }
+
+            .case-study-detail-section h3 {
+                font-size: 1.4em;
+            }
+
+            .case-study-detail-section p,
+            .case-study-detail-section ul li {
+                font-size: 0.9em;
+            }
+
+            /* Blog & FAQ on smallest phones */
+            .blog-header h1 {
+                font-size: 1.8em;
+            }
+
+            .blog-post h2 {
+                font-size: 1.5em;
+            }
+
+            .faq-section h2 {
+                font-size: 1.8em;
+            }
+
+            .faq-question {
+                font-size: 0.95em;
+            }
+
+            .blog-single-post-section h2 {
+                font-size: 1.8em;
+            }
+
+            .blog-single-post-section h3 {
+                font-size: 1.4em;
+            }
         }
-/* Styles for Add Testimonial Section */
-.add-testimonial-section {
-    margin-top: 80px; /* More separation */
-    padding: 50px 30px; /* More padding */
-    background-color: #eaf6ff; /* Light blue background */
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    max-width: 750px; /* Wider form area */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
-.add-testimonial-section h3 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.add-testimonial-section h3::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto 0;
-}
-
-
-.add-testimonial-section .section-description {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.testimonial-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #444;
-    font-size: 1.05em;
-}
-
-.testimonial-form input[type="text"],
-.testimonial-form textarea,
-.testimonial-form select {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 25px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-form input[type="text"]:focus,
-.testimonial-form textarea:focus,
-.testimonial-form select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-    outline: none;
-}
-
-.testimonial-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.testimonial-form button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: block;
-    width: auto;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-form button[type="submit"]:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Case Study Section Styles */
-.client-stories-section {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #eee;
-}
-
-.client-stories-section h3 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.client-stories-section h3::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto 0;
-}
-
-.case-study-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 40px auto;
-}
-
-.case-study-item {
-    background-color: #fefefe;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.case-study-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-.case-study-item h4 {
-    font-size: 1.5em;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.case-study-item p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.case-study-item .btn {
-    padding: 8px 18px;
-    font-size: 0.9em;
-    border-radius: 20px;
-}* Case Study Section Styles */
-.client-stories-section {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #eee;
-}
-
-.client-stories-section h3 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.client-stories-section h3::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto 0;
-}
-
-.case-study-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 40px auto;
-}
-
-.case-study-item {
-    background-color: #fefefe;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.case-study-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-.case-study-item h4 {
-    font-size: 1.5em;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.case-study-item p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.case-study-item .btn {
-    padding: 8px 18px;
-    font-size: 0.9em;
-    border-radius: 20px;
-}
-
-/* Service Detail Section Styles */
-.service-detail-section {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 40px;
-    margin: 40px auto;
-    max-width: 800px;
-    text-align: left;
-}
-
-.service-detail-section h2 {
-    font-size: 2.5em;
-    color: #0056b3;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.service-detail-section h3 {
-    font-size: 1.8em;
-    color: #007bff;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.service-detail-section p {
-    font-size: 1.05em;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.service-detail-section ul {
-    list-style: disc;
-    margin-left: 25px;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.service-detail-section li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-    font-size: 1em;
-}
-
-.service-detail-section .btn {
-    display: inline-block;
-    margin-top: 30px;
-    text-align: center;
-    width: auto;
-}
-
-
-/* --- Blog & FAQ Tab Content Styles (blog-faq-tab-content) --- */
-
-/* Basic Section Padding and Background */
-#blog-faq-tab-content {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Blog Header Section */
-.blog-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.blog-header h1 {
-    font-size: 2.8em; /* Slightly larger for main blog title */
-    color: #0056b3; /* Doali's primary blue */
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.blog-header p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
-}
-
-/* Blog Container - Flexbox for main content and sidebar */
-.blog-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 30px; /* Space between main content and sidebar */
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-}
-
-/* Blog Main Content Area */
-.blog-main-content {
-    flex: 3; /* Takes 3 parts of the available space */
-    min-width: 300px; /* Minimum width before wrapping */
-}
-
-/* Individual Blog Post Styles */
-.blog-post {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-.blog-post h2 {
-    font-size: 2em;
-    color: #007bff; /* Doali's secondary blue */
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-
-.blog-post .meta {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.blog-post img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 25px;
-    display: block; /* Ensures image takes full width */
-}
-
-.blog-post p {
-    font-size: 1em;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #444;
-}
-
-.blog-post p strong {
-    color: #0056b3; /* Highlight important text */
-}
-
-.blog-post ul,
-.blog-post ol {
-    margin-left: 25px;
-    margin-bottom: 15px;
-    list-style-type: disc; /* Default for ul */
-    color: #444;
-}
-
-.blog-post ol {
-    list-style-type: decimal;
-}
-
-.blog-post li {
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-.blog-post .read-more {
-    display: inline-block;
-    margin-top: 15px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.blog-post .read-more:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-.blog-post .read-more i {
-    margin-left: 5px;
-}
-
-/* --- FAQ Section Styles --- */
-.faq-section {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    margin-bottom: 40px;
-}
-
-.faq-section h2 {
-    text-align: center;
-    font-size: 2.2em;
-    color: #007bff;
-    margin-bottom: 30px;
-}
-
-.faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-    cursor: pointer;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #333;
-    padding-right: 10px; /* Space for the icon */
-}
-
-.faq-question .icon {
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
-    color: #007bff;
-}
-
-.faq-question.active .icon {
-    transform: rotate(45deg); /* Changes plus to an X or makes it look like a minus */
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out; /* Smooth collapse/expand */
-    opacity: 0;
-    padding-top: 0;
-}
-
-.faq-answer p {
-    padding-top: 15px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* When the answer is active (JS adds a class, e.g., 'active-answer') */
-.faq-answer.active {
-    max-height: 500px; /* Adjust based on expected content length */
-    opacity: 1;
-}
-
-
-/* --- Blog Sidebar Styles --- */
-.blog-sidebar {
-    flex: 1; /* Takes 1 part of the available space */
-    min-width: 250px; /* Minimum width before wrapping */
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    align-self: flex-start; /* Sticks to the top */
-    position: sticky; /* Sticky sidebar */
-    top: 20px; /* Adjust as needed for header clearance */
-}
-
-.blog-sidebar h3 {
-    font-size: 1.5em;
-    color: #0056b3;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-.blog-sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.blog-sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.blog-sidebar ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 1em;
-    transition: color 0.3s ease;
-}
-
-.blog-sidebar ul li a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-.recent-posts .recent-post-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.recent-posts .recent-post-item img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 15px;
-    flex-shrink: 0; /* Prevents image from shrinking */
-}
-
-.recent-posts .recent-post-item h4 {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-    line-height: 1.4;
-}
-
-.recent-posts .recent-post-item h4 a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.recent-posts .recent-post-item h4 a:hover {
-    color: #007bff;
-}
-
-.recent-posts .recent-post-item p {
-    font-size: 0.85em;
-    color: #888;
-}
-
-/* --- Blog Single Post Section Styles (for home-cleaning-post-content, etc.) --- */
-.blog-single-post-section {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 40px;
-    margin: 40px auto; /* Center and give space */
-    max-width: 900px; /* Max width for single post content */
-    line-height: 1.7;
-}
-
-.blog-single-post-section h2 {
-    font-size: 2.5em;
-    color: #0056b3;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.blog-single-post-section .meta {
-    text-align: center;
-    font-size: 0.95em;
-    color: #777;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-.blog-single-post-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 35px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.blog-single-post-section h3 {
-    font-size: 1.8em;
-    color: #007bff;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.blog-single-post-section p {
-    font-size: 1.05em;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.blog-single-post-section p strong {
-    color: #0056b3;
-}
-
-.blog-single-post-section ul,
-.blog-single-post-section ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
-    list-style-type: disc;
-    color: #444;
-}
-
-.blog-single-post-section ol {
-    list-style-type: decimal;
-}
-
-.blog-single-post-section li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.blog-single-post-section .btn {
-    display: inline-block;
-    margin-top: 30px;
-    text-align: center;
-    width: auto;
-}
-
-/* --- Footer Styles --- */
-.footer {
-    background-color: #222; /* Darker footer background */
-    color: #f0f0f0;
-    padding: 60px 20px 20px; /* More padding top */
-    font-size: 0.95em;
-    margin-top: 60px;
-    border-top: 5px solid #007bff; /* Accent border */
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px; /* Increased gap between columns */
-    max-width: 1200px;
-    margin: 0 auto 40px; /* Space below content before bottom bar */
-    text-align: left;
-}
-
-.footer-content h3 {
-    color: #007bff; /* Bright blue for headings */
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-content h3::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #28a745; /* Green accent */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.footer-about p,
-.footer-contact p {
-    line-height: 1.7;
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-.footer-contact p i {
-    margin-right: 10px;
-    color: #007bff; /* Icon color */
-    width: 20px; /* Fixed width for icon alignment */
-    text-align: center;
-}
-
-.footer-contact a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-contact a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
-    padding: 5px 0;
-}
-
-.footer-links ul li a:hover {
-    color: #fff;
-    padding-left: 5px; /* Subtle hover effect */
-}
-
-.footer-newsletter p {
-    margin-bottom: 15px;
-    color: #ccc;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 10px;
-}
-
-.newsletter-form input[type="email"] {
-    flex-grow: 1;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.95em;
-}
-
-.newsletter-form input[type="email"]::placeholder {
-    color: #aaa;
-}
-
-.newsletter-form .btn-primary-small {
-    background-color: #28a745; /* Green subscribe button */
-    color: white;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 0.95em;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.newsletter-form .btn-primary-small:hover {
-    background-color: #218838;
-}
-
-.footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 25px;
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between copyright and social icons */
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #aaa;
-}
-
-.social-icons-footer {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons-footer a {
-    color: #007bff; /* Default color for social icons in footer */
-    font-size: 1.5em;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-/* Specific colors for footer social icons */
-.social-icons-footer .fab.fa-facebook-f { color: #3b5998; }
-.social-icons-footer .fab.fa-instagram { color: #E1306C; }
-.social-icons-footer .fab.fa-whatsapp { color: #25d366; }
-
-.social-icons-footer a:hover {
-    transform: scale(1.1);
-    color: #fff; /* White on hover for contrast */
-}
-
-/* Live Chat Button */
-.live-chat-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #28a745; /* Green */
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 25px;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.live-chat-btn:hover {
-    background-color: #218838;
-    transform: translateY(-3px);
-}
-
-.live-chat-btn i {
-    font-size: 1.2em;
-}
-
-case-study-detail-section {
-    padding: 20px; /* Inner padding within the section */
-}
-
-/* Main Heading for Case Study */
-.case-study-detail-section h2 {
-    color: #0056b3; /* A strong, professional blue for main titles */
-    text-align: center;
-    margin-bottom: 30px; /* Space below the main heading */
-    font-size: 2.5em; /* Larger, more impactful heading */
-    font-weight: 700; /* Bold */
-    line-height: 1.3;
-    border-bottom: 2px solid #e0e0e0; /* Subtle underline */
-    padding-bottom: 15px; /* Space between text and underline */
-}
-
-/* Paragraph Text */
-.case-study-detail-section p {
-    margin-bottom: 15px; /* Space between paragraphs */
-    font-size: 1.05em;
-    color: #444; /* Slightly lighter gray for body text */
-}
-
-/* Client Name Highlight */
-.case-study-detail-section p strong {
-    color: #0056b3; /* Highlight client name with the primary color */
-    font-weight: 600; /* Slightly bolder */
-}
-
-/* Sub-headings (Our Solution, Results) */
-.case-study-detail-section h3 {
-    color: #007bff; /* A slightly lighter blue for sub-headings */
-    margin-top: 35px; /* More space above sub-headings */
-    margin-bottom: 15px;
-    font-size: 1.8em; /* Size for sub-headings */
-    font-weight: 600;
-    border-bottom: 1px solid #e0e0e0; /* Subtle underline for sub-headings */
-    padding-bottom: 8px; /* Space below underline */
-}
-
-/* Results List Styling */
-.case-study-detail-section ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Remove default ul padding */
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.case-study-detail-section ul li {
-    background-color: #e6f7ff; /* Light blue background for list items */
-    padding: 15px 20px;
-    margin-bottom: 10px; /* Space between list items */
-    border-left: 5px solid #007bff; /* Accent border on the left */
-    border-radius: 5px; /* Rounded corners for list items */
-    font-size: 1.1em;
-    color: #333;
-    display: flex; /* Allows checkmark to align nicely */
-    align-items: flex-start; /* Align text to top if multiple lines */
-}
-
-/* Add a checkmark icon to list items (requires no HTML change if used with ::before) */
-.case-study-detail-section ul li::before {
-    content: '\2713'; /* Unicode checkmark character */
-    color: #28a745; /* Green checkmark */
-    font-weight: bold;
-    margin-right: 15px;
-    font-size: 1.2em;
-    line-height: 1; /* Aligns vertically with text */
-    flex-shrink: 0; /* Prevent icon from shrinking on small screens */
-}
-
-
-/* --- Call to Action / Back Button Styling --- */
-.case-study-detail-section .btn-primary {
-    display: block; /* Make it a block element to control width/margin */
-    width: fit-content; /* Adjust width to content */
-    margin: 40px auto 20px auto; /* Center button horizontally with margins */
-        color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-decoration: none; /* Remove underline from link */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
-}
-
-.case-study-detail-section .btn-primary:hover {
-
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Responsive Adjustments --- */
-
-
-    .case-study-detail-section h2 {
-        font-size: 2em; /* Smaller main heading */
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-    }
-
-    .case-study-detail-section h3 {
-        font-size: 1.5em; /* Smaller sub-headings */
-        margin-top: 25px;
-    }
-
-    .case-study-detail-section p,
-    .case-study-detail-section ul li {
-        font-size: 1em; /* Adjust font size for readability on small screens */
-    }
-
-    .case-study-detail-section ul li {
-        padding: 12px 15px; /* Slightly less padding for list items */
-    }
-
-    .case-study-detail-section ul li::before {
-        margin-right: 10px; /* Reduce margin for checkmark */
-    }
-
-    .case-study-detail-section .btn-primary {
-        width: 100%; /* Full width button on small screens */
-        padding: 15px;
-    }
-
