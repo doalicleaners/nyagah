@@ -1,3 +1,4 @@
+
 /* General Body and Container Styles */
         body {
             font-family: Arial, sans-serif;
@@ -2038,7 +2039,143 @@
                 font-size: 1.4em;
             }
         }
-/* WhatsApp Floating Button */
+/* General Button Styles - Keep these as they are good */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Primary Button Style (for "Book Us") */
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Secondary Button Style (for "Get a Free Quote") */
+.btn-secondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --- Positioning for the NEW .cta-buttons container --- */
+.hero-section .cta-buttons {
+    display: flex; /* Arrange buttons in a row */
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px; /* Space below the hero content/image */
+    justify-content: center; /* Center the buttons horizontally */
+    width: 100%; /* Ensure it spans the full width for centering */
+    padding-bottom: 20px; /* Add some padding at the bottom of the section */
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hero-section .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 15px; /* Space between stacked buttons */
+        align-items: center; /* Center stacked buttons */
+    }
+}
+
+/* Ensure the circular images are styled correctly within hero-image */
+.hero-section .hero-image .circular-images {
+    display: flex;
+    justify-content: center; /* Or align them as needed relative to the main image */
+    gap: 15px; /* Space between circular images */
+    margin-top: 20px; /* Space below the main hero image */
+}
+
+.hero-section .hero-image .circular-images .circle-img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff; /* Optional: add a border for emphasis */
+}
+
+/* Basic layout for hero section to ensure content flows correctly */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Stack content, image, and buttons vertically */
+    align-items: center; /* Center overall content */
+    text-align: center; /* Center text within content blocks */
+    padding: 50px 20px; /* Add padding around the entire section */
+}
+
+.hero-section .hero-content {
+    margin-bottom: 30px; /* Space between text content and image/buttons */
+    max-width: 800px; /* Limit width of text for readability */
+}
+
+.hero-section .hero-image {
+    margin-bottom: 30px; /* Space between image group and buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section .hero-image .main-cleaning-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: slight rounding for main image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}/* Styles for the delete button */
+.delete-testimonial-btn {
+    background-color: #dc3545; /* Red color for danger */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.delete-testimonial-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Adjust testimonial card for button */
+#userTestimonials .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+    align-items: flex-start;
+}
+
+/* Optional: Styling for the new section heading */
+.manage-testimonials-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}/* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed; /* Makes the button stay in place even when scrolling */
     bottom: 20px;    /* Distance from the bottom of the viewport */
